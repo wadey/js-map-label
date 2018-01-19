@@ -106,6 +106,10 @@ MapLabel.prototype.drawCanvas_ = function() {
  */
 MapLabel.prototype.onAdd = function() {
   var canvas = this.canvas_ = document.createElement('canvas');
+  canvas.width = 500;
+  canvas.height = 500;
+  canvas.style.width = "250px";
+  canvas.style.height = "250px";
   var style = canvas.style;
   style.position = 'absolute';
 
@@ -135,7 +139,7 @@ MapLabel.prototype.getMarginLeft_ = function(textWidth) {
     case 'right':
       return -textWidth;
   }
-  return textWidth / -2;
+  return textWidth / -4;
 };
 
 /**
